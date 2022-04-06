@@ -1,0 +1,166 @@
+:root{
+    --main-color: rgba(78, 78, 78, 0.993);
+    --red-color: rgba(241, 37, 37, 0.493);
+    --yellow-color : rgba(241, 209, 31, 0.671);
+    --green-color : rgba(18, 219, 18, 0.623);
+    --transparent : #ceebf82a;
+
+}
+
+
+body{
+    background-color: lightblue;
+}
+
+.main{
+    width: 150px;
+    height: 370px;
+    background-color: var(--main-color);
+    margin: 50px auto;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    gap: 0.6rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.main::before{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 60px;
+    top: -9px;
+    background: rgb(66, 64, 64);
+    border-radius: 3px 3px 0 0;
+}
+.main::after{
+    content: '';
+    position: absolute;
+    background: rgb(66, 64, 64);
+    height: 10px;
+    width: 60px;
+    bottom: -9px;
+    border-radius: 0 0 3px 3px;
+}
+
+
+.square{
+    height: 100px;
+    width:100px;
+    background: rgb(66, 64, 64);
+    padding: 2px;
+    border-radius: 8px;
+}
+
+.square::after,
+.square::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right:50px solid transparent;
+    border-top: 90px solid var(--main-color); 
+}
+
+
+
+.first::after{
+ left: -35px;
+ top: 14px;
+ z-index: -1;
+}
+
+.first::before{
+    left: 70px;
+    top: 14px;
+    z-index: -1;
+}
+
+
+
+.second::after{
+ left: -35px;
+ top: 133px;
+ z-index: -1;
+}
+
+.second::before{
+    left: 70px;
+    top: 133px;
+    z-index: -1;
+
+}
+
+
+
+.third::after{
+left: -35px;
+bottom: 30px;
+z-index: -1;
+}
+
+.third::before{
+    left: 70px;
+    bottom: 30px;
+    z-index: -1;
+}
+
+
+
+
+
+.circle{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin: 3px auto;
+    
+}
+
+.leg{
+    width: 20px;
+    height: 270px;
+    background-color: rgba(66, 64, 64);
+    position: absolute;
+    bottom: -270px;
+}
+
+.a{
+    background-color: var(--red-color);  
+}
+
+.a::after,
+.b::after,
+.c::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 40px;
+    background-color: var(--transparent);
+    border-radius: 50%;
+    left: 55px;
+    top: 40px;
+}
+
+.b{
+    background-color: var(--yellow-color);
+}
+
+.b::after{
+    top:150px
+}
+
+
+.c{
+    background-color: var(--green-color);
+}
+
+.c::after{
+    top:260px;
+}
+
+
